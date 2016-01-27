@@ -1,0 +1,23 @@
+{
+  "name": "melitest",
+  "version": "1.0.0",
+  "description": "This is just a test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gastonlasarte/melitest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gastonlasarte/melitest/issues"
+  },
+  "homepage": "https://github.com/gastonlasarte/melitest#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
