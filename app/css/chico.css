@@ -2088,11 +2088,6 @@ input.ch-form-icon-input:focus {
   padding-right: 29px;
 }
 
-/* Module */
-.ch-form fieldset {
-  margin: 0 0 10px 0;
-}
-
 /* Title module */
 .ch-form legend {
   color: #dc7b1c;

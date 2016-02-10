@@ -1,0 +1,20 @@
+body {
+  font-size: 13px; }
+
+h1 {
+  font-size: 2.3em; }
+
+header {
+  padding: 13px 0; }
+
+.ch-main-container {
+  text-align: center; }
+
+.ch-product-gallery,
+.ch-product-info {
+  display: inline-block;
+  vertical-align: top; }
+
+.ch-product-info {
+  max-width: 480px;
+  text-align: left; }
