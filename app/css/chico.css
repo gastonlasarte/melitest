@@ -142,8 +142,8 @@ p + p {
      * Safari, Android, iOS
      * Legacy iOS
      */
-  src: url("../assets/icons.eot");
-  src: url("../assets/icons.eot?#iefix") format("embedded-opentype"), url("../assets/icons.woff") format("woff"), url("../assets/icons.ttf") format("truetype"), url("../assets/icons.svg#icons") format("svg");
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -2086,6 +2086,11 @@ input.ch-form-icon-input:focus {
 
 .ch-form-big .ch-form-row .ch-form-icon-input:focus {
   padding-right: 29px;
+}
+
+/* Module */
+.ch-form fieldset {
+  margin: 0 0 10px 0;
 }
 
 /* Title module */

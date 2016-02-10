@@ -1,0 +1,26 @@
+.ch-product-gallery,
+.ch-product-info {
+  display: inline-block;
+  vertical-align: top; }
+
+.ch-product-info {
+  max-width: 480px;
+  padding: 13px;
+  text-align: left; }
+  .ch-product-info .ch-form fieldset {
+    margin: 0; }
+  .ch-product-info .ch-form .ch-form-hint {
+    display: block;
+    line-height: 1.5; }
+  .ch-product-info .ch-form .ch-form-row {
+    padding: 0; }
+    .ch-product-info .ch-form .ch-form-row label {
+      width: auto; }
+  .ch-product-info .ch-form .ch-price {
+    font-size: 2.8em;
+    letter-spacing: -1px;
+    padding-bottom: 5px;
+    vertical-align: top; }
+  .ch-product-info .ch-form .ch-price sup {
+    font-size: .5em;
+    line-height: 1.5; }

@@ -1,0 +1,24 @@
+// styles.css
+@import "variables.scss";
+
+body {
+	font-size: $base-font;
+}
+
+h1 {
+	font-size: $product-main-title;
+}
+
+header {
+	padding: $padding 0;
+}
+
+.ch-items-recomended {
+	padding: $padding 0;
+}
+
+.ch-main-container {
+	margin: auto;
+	max-width: $desktop-view-port;
+	text-align: center;
+}

@@ -1,0 +1,45 @@
+// styles.css
+@import "variables.scss";
+
+.ch-product-gallery,
+.ch-product-info {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ch-product-info {
+	max-width: 480px;
+	padding: $padding;
+	text-align: left;
+
+	.ch-form {
+
+		fieldset {
+			margin: 0;
+		}
+
+		.ch-form-hint {
+			display: block;
+			line-height: 1.5;
+		}
+
+		.ch-form-row {
+			padding: 0;
+
+			label {
+				width: auto;
+			}
+		}
+
+		.ch-price {
+			font-size: $product-price;
+			letter-spacing: -1px;
+			padding-bottom: 5px;
+			vertical-align: top;
+		}
+		.ch-price sup {
+			font-size: .5em;
+			line-height: 1.5;
+		}
+	}
+}

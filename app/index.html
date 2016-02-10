@@ -7,7 +7,9 @@
 		<link rel="stylesheet" href="http://static.mlstatic.com/org-img/ch/mesh/2.2/mesh.min.css">
 		<!--build:css css/styles.min.css-->
 		<link rel="stylesheet" href="css/chico.css">
-		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/general.css">
+		<link rel="stylesheet" href="css/product.css">
+		<link rel="stylesheet" href="css/footer.css">
 		<!-- endbuild -->
 	</head>
 	<body>
@@ -26,7 +28,7 @@
 						</fieldset>
 						<fieldset>
 							<div class="ch-form-row">
-								<label for="quantity">Quantity:<em>*</em></label>
+								<label for="quantity">Quantity</label>
 								<select id="quantity" required>
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -37,7 +39,7 @@
 						</fieldset>
 						<fieldset>
 							<div class="ch-form-row">
-								<label for="payments">Payments:<em>*</em></label>
+								<label for="payments">Payments</label>
 								<select id="payments" required>
 									<option value="3">3</option>
 									<option value="6">6</option>
@@ -67,23 +69,23 @@
 			</main>
 			<hr />
 			<footer role="footer">
+                <div id="product-description">
+                    <a href="#product-description">Product Description</a>
+                    <div class="ch-product-description">
+                    	<p>Lorem ipsum dolor asimet</p>
+                    </div>
+                </div>
                 <div id="questions">
                     <a href="#questions">Questions</a>
                     <div class="ch-dialog-wrapper">
                     	<div class="ch-buyer">
                     		<h3>Buyer</h3>
-                    		<p>Do you have it on white?</p>
+                    		<p class="ch-box-info">Do you have it on white?</p>
                     	</div>
                     	<div class="ch-seller">
                     		<h3>Seller</h3>
-                    		<p>No I don't. I only have it on black.</p>
+                    		<p class="ch-box-ok">No I don't. I only have it on black.</p>
                     	</div>
-                    </div>
-                </div>
-                <div id="product-description">
-                    <a href="#product-description">Product Description</a>
-                    <div class="ch-product-description">
-                    	<p>Lorem ipsum dolor asimet</p>
                     </div>
                 </div>
 			</footer>
