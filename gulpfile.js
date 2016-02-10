@@ -3,7 +3,10 @@ var gulp,
 	browserSync,
 	uglify,
 	gulpIf,
-	useref;
+	useref,
+	cssnano,
+	del,
+	runSequence;
 
 // Requires
 gulp = require('gulp');
@@ -12,6 +15,9 @@ browserSync = require('browser-sync');
 useref = require('gulp-useref');
 uglify = require('gulp-uglify');
 gulpIf = require('gulp-if');
+cssnano = require('gulp-cssnano');
+del = require('del');
+runSequence = require('run-sequence');
 
 // BrowserSync
 gulp.task('browserSync', function() {
@@ -26,14 +32,14 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function () {
 	return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
 	.pipe(sass()) // Using the gulp sass plugin
-	.pipe(gulp.dest('dist/css'))
+	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({
 		stream: true
     }))
 });
 
 // Watchers
-gulp.task('watch', ['browserSync', 'sass'], function () {
+gulp.task('watch', function () {
 	gulp.watch('app/scss/**/*.scss', ['sass']); // Watch all sass files
 	gulp.watch('app/*.html', browserSync.reload); // Reloads the browser whenever HTML files change
 	gulp.watch('app/js/**/*.js', browserSync.reload); // Reloads the browser whenever JS files change
@@ -43,6 +49,32 @@ gulp.task('watch', ['browserSync', 'sass'], function () {
 gulp.task('useref', function() {
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify())) // Minifies only if it's a JavaScript file
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 });
+
+// Cleaning 
+gulp.task('clean', function() {
+  return del.sync('dist').then(function(cb) {
+    return cache.clearAll(cb);
+  });
+})
+gulp.task('clean:dist', function() {
+  return del.sync('dist/**/*');
+})
+
+// Builds
+gulp.task('default', function(callback) {
+  runSequence(['sass', 'browserSync', 'watch'],
+    callback
+  )
+})
+
+gulp.task('build', function(callback) {
+  runSequence(
+    'clean:dist',
+    ['sass', 'useref'],
+    callback
+  )
+})
